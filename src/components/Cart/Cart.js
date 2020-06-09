@@ -1,7 +1,10 @@
 import React from 'react';
+//import { useContext } from 'react';
+//import { UserContext } from '../../App';
 
 const Cart = (props) => {
     const cart = props.cart;
+
     //const total = cart.reduce((total, product) =>total + product.price, 0);
     let total = 0;
     for(let i=0; i<cart.length; i++){
@@ -23,7 +26,7 @@ const Cart = (props) => {
     const grandTotal = (total+shipping).toFixed(2);
     return (
         <div>
-            <h4>Cart Summary</h4>
+            <h4 className="text-success">Cart Summary</h4>
             <p>Item Order: {cart.length}</p>
             <p>Price: {(total).toFixed(2)}</p>
             <p>Shipping: {shipping}</p>
